@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require File.expand_path(
+    File.join(File.dirname(__FILE__), %w[.. lib backrub]))
+
+# Put your code here
+  path = ""
+  
+  if ARGV[0]
+    path = ARGV[0]    
+  else
+    path = "~/.backrub"
+  end
+  
+  if !File.exists?(path)
+    puts "no .backrub file found, exiting"
+    exit 5
+  end
+  
+  Backrub::process(path)
+  
+  
+# EOF
