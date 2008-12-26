@@ -1,0 +1,14 @@
+--- !ditz.rubyforge.org,2008-03-06/project 
+name: backrub
+version: "0.5"
+components: 
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: backrub
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: Uploaders
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: Jobs
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: Website
+releases: []
+

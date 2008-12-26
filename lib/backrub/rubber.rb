@@ -48,7 +48,7 @@ module Backrub
         end
       end
 
-      all_backup_dirs = ftp.nlst(ftp_dest).sort
+      all_backup_dirs = ftp.nlst("#{ftp_dest}").sort
       if all_backup_dirs.length > self.keep_days
         all_backup_dirs.sort[0,all_backup_dirs.length-self.keep_days].each do |old_directory|
           puts("lösche altes backup verzeichnis #{old_directory}")

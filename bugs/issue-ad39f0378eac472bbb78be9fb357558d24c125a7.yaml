@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Wrapper for system calls
+desc: |-
+  There should be a method that wraps system calls. This should be done for a few reasons:
+  
+  - Returncodes should be tracked (we need exception handling if a system call fails)
+  - We can capture output and pipe it to logging
+type: :feature
+component: backrub
+release: 
+reporter: Jan Krutisch <jan@krutisch.de>
+status: :unstarted
+disposition: 
+creation_time: 2008-12-26 21:47:02.917268 Z
+references: []
+
+id: ad39f0378eac472bbb78be9fb357558d24c125a7
+log_events: 
+- - 2008-12-26 21:47:05.189734 Z
+  - Jan Krutisch <jan@krutisch.de>
+  - created
+  - ""

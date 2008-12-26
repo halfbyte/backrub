@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: real logging
+desc: All instances of "puts" should be either deleted or replaced with a robust and flexible logging mechanism.
+type: :feature
+component: backrub
+release: 
+reporter: Jan Krutisch <jan@krutisch.de>
+status: :unstarted
+disposition: 
+creation_time: 2008-12-26 21:45:12.245812 Z
+references: []
+
+id: c62ea1f695473e469cc7339476d29a7772a2e5a8
+log_events: 
+- - 2008-12-26 21:45:18.685865 Z
+  - Jan Krutisch <jan@krutisch.de>
+  - created
+  - ""
