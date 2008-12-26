@@ -4,13 +4,14 @@ FTP_PASSWORD = "foobar"
 KEEP_DAYS = 3
 # dry backrub skips the actual uploading process for testing purposes
 dry_backrub(FTP_HOST, FTP_USER, FTP_PASSWORD, KEEP_DAYS) do
-  backup("~/etc/", "~/var/backups/etc", "etc") do |src, dest|
+  backup_subdirectories("~/etc/", "~/var/backups/etc", "etc") do |src, dest|
     system("cp -r #{src} #{dest}")
   end
   
-  backup(['familylounge_development', 'soulpeddler_development'], "~/var/backups/mysql", "mysql") do |src, dest|
+  backup_dumps(['familylounge_development', 'soulpeddler_development'], "~/var/backups/mysql", "mysql") do |src, dest|
     FileUtils.mkdir_p(dest)
-    system("mysqldump5 -uroot -proot #{src} >#{dest}/dump.sql")
+    system("mysqldump5 -uroot -proot #{src} >#{dest}/#{src}.sql")
+    "#{src}.sql"
   end
   
 end

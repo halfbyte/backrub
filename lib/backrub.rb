@@ -40,7 +40,7 @@ module Backrub
     Dir.glob(search_me).sort.each {|rb| require rb}
   end
   def self.process(file)
-    Backrub::Rubber.execute(file)
+    Backrub::Rubber.new(file)
   end
 end  # module Backrub
 
