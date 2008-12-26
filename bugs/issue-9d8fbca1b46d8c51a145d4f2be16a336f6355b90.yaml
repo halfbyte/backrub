@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Abstracting the Remote Layer
+desc: Abstracting away the remote layer would be great. It would allow us to store away backups on S3 instead of FTP and so on.
+type: :feature
+component: Uploaders
+release: 
+reporter: Jan Krutisch <jan@krutisch.de>
+status: :unstarted
+disposition: 
+creation_time: 2008-12-26 21:58:34.027140 Z
+references: []
+
+id: 9d8fbca1b46d8c51a145d4f2be16a336f6355b90
+log_events: 
+- - 2008-12-26 21:58:38.619003 Z
+  - Jan Krutisch <jan@krutisch.de>
+  - created
+  - ""
