@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
-require File.expand_path(
-    File.join(File.dirname(__FILE__), %w[.. lib backrub]))
+require 'rubygems'
+require 'backrub'
+
+#require File.expand_path(
+#    File.join(File.dirname(__FILE__), %w[.. lib backrub]))
 
 # Put your code here
   path = ""

@@ -4,4 +4,10 @@ README.txt
 Rakefile
 bin/backrub
 lib/backrub.rb
+lib/backrub/dir.rb
+lib/backrub/ftp_backup.rb
+lib/backrub/ftp_session.rb
+lib/backrub/mock_ftp_session.rb
+lib/backrub/rubber.rb
+
 test/test_backrub.rb

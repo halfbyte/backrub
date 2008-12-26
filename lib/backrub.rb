@@ -1,3 +1,11 @@
+$:.unshift File.dirname(__FILE__)
+
+require 'backrub/rubber'
+require 'backrub/dir'
+#require 'backrub/ftp_backup'
+require 'backrub/ftp_session'
+require 'backrub/mock_ftp_session'
+
 module Backrub
 
   # :stopdoc:
@@ -44,6 +52,6 @@ module Backrub
   end
 end  # module Backrub
 
-Backrub.require_all_libs_relative_to(__FILE__)
+#Backrub.require_all_libs_relative_to(__FILE__)
 
 # EOF
