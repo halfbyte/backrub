@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Give backrub a directory of config files (dot d mode)
+desc: If the path given as a parameter is a directory, try to load all *.backrub files and process them serially. This would allow /etc/backrub.d/ to work.
+type: :feature
+component: backrub
+release: 
+reporter: Jan Krutisch <jan@krutisch.de>
+status: :unstarted
+disposition: 
+creation_time: 2008-12-30 02:23:19.988212 Z
+references: []
+
+id: f7f3b507e60f329aeb6743d1b5ecaa7e6530b332
+log_events: 
+- - 2008-12-30 02:23:26.708947 Z
+  - Jan Krutisch <jan@krutisch.de>
+  - created
+  - ""
