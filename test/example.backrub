@@ -13,5 +13,8 @@ dry_backrub(FTP_HOST, FTP_USER, FTP_PASSWORD, KEEP_DAYS) do
     system("mysqldump5 -uroot -proot #{src} >#{dest}/#{src}.sql")
     "#{src}.sql"
   end
+
+  backup_directory("~/etc/foobar", "~/var/backups/foobar", "etc")
   
 end
+

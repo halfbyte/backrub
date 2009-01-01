@@ -99,6 +99,45 @@ module Backrub
       cleanup_old_backups(dest, ftp_dest)
       
     end
+
+    def backup_directory(src, dest, ftp_dest)
+      ftp.chdir(ftp_dest)
+      src = File.expand_path(src)
+      src_name = File.basename(src)
+      dest = File.expand_path(dest)
+      FileUtils.mkpath(dest)
+      last_backup = Dir.list(dest).sort.last
+      puts("letztes backup-verzeichnis: #{last_backup}")
+      today = Time.now.strftime('%Y-%m-%d-%H-%M')
+      
+      FileUtils.mkpath("#{dest}/#{today}")
+      FileUtils.chdir("#{dest}/#{today}")
+      
+      ftp.mkdir(today)
+      ftp.chdir(today)
+      
+      puts "processing #{src}"
+      
+      real_dest = "#{dest}/#{today}"
+      if block_given?
+        yield src, real_dest
+      else
+        system("cp -r #{src} #{real_dest}/#{src_name}")
+      end
+        
+      puts("erstelle #{src_name}.tar.gz")   
+      system("tar cfz #{src_name}.tar.gz #{src_name}")
+        
+      puts("kopiere #{src_name}.tar.gz auf ftp-server")
+      self.ftp.putbinaryfile("#{src_name}.tar.gz", "#{src_name}.tar.gz", 1024)
+    
+      puts("lösche lokales archiv")
+      system("rm #{src_name}.tar.gz")
+        
+      cleanup_old_backups(dest, ftp_dest)
+      
+    end
+
     
     def backup_dumps(entries, dest, ftp_dest)      
       ftp.chdir(ftp_dest)            
